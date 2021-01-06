@@ -7,7 +7,6 @@ import MessageBox from '../components/MessageBox';
 export default function OrderHistoryScreen(props) {
     const orderMineList = useSelector( (state) =>state.orderMineList);
     const {loading,error,orders} = orderMineList;
-    console.log(orderMineList)
     const dispatch = useDispatch();
     useEffect(()=>{
         dispatch(listOrderMine());
