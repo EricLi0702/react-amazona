@@ -39,7 +39,7 @@ export const detailsOrder = (orderId) => async (dispatch,getState) => {
             error.response && error.response.data.message
                 ? error.response.data.message
                 : error.message;
-        dispatch({type:ORDER_DETAILS_FAIL, paylad:message})
+        dispatch({type:ORDER_DETAILS_FAIL, payload:message})
     }
 }
 
@@ -58,7 +58,7 @@ export const payOrder = (order, paymentResult) => async (dispatch,getState) => {
             error.response && error.response.data.message
                 ? error.response.data.message
                 : error.message;
-        dispatch({type:ORDER_PAY_FAIL, paylad:message})       
+        dispatch({type:ORDER_PAY_FAIL, payload:message})       
     }
 }
 
@@ -77,6 +77,6 @@ export const listOrderMine = () => async(dispatch,getState)=>{
         error.response && error.response.data.message
             ? error.response.data.message
             : error.message;
-        dispatch({type:ORDER_MINE_LIST_FAIL, paylad:message})       
+        dispatch({type:ORDER_MINE_LIST_FAIL, payload:message})       
     }
 }
